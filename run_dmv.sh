@@ -2,7 +2,7 @@
 
 MODEL=dmv
 # MODEL=loglineardmv
-CONFIG=./config/experiment_5.ini
+CONFIG=./config/experiment_26.ini
 NAME=trial1
 
 python main.py \
