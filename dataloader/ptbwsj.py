@@ -45,13 +45,13 @@ def read_ptbwsj(split, min_length, max_length):
                                 batch_postags=batch_postags,
                                 batch_arcs=batch_arcs)
 
-    total_arcs = 0
+    total_tokens = 0
     for postags in batch_postags:
-        total_arcs += len(postags[:1])
+        total_tokens += len(postags[:1]) # Exclude ROOT
     utils.writelog("dataloader.read_ptbwsj", "split=%s" % split)
     utils.writelog("dataloader.read_ptbwsj", "minimum length=%d" % min_length)
     utils.writelog("dataloader.read_ptbwsj", "maximum length=%d" % max_length)
     utils.writelog("dataloader.read_ptbwsj", "# of instances=%d" % len(databatch))
-    utils.writelog("dataloader.read_ptbwsj", "# of arcs=%d" % total_arcs)
+    utils.writelog("dataloader.read_ptbwsj", "# of tokens (w/o ROOT)=%d" % total_tokens)
     return databatch
 
