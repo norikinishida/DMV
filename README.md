@@ -38,6 +38,6 @@ Edit following files:
 ## Training, Evaluation, Output dumping ##
 
 ```
-./run_methods.sh
+./run_dmv.sh
 ```
 
