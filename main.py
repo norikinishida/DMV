@@ -350,7 +350,6 @@ def main(args):
 
     # Initialize/Load parameters
     if actiontype == "train":
-        model.dev_databatch = dev_databatch # FIXME
         model.init_params(init_method=init_method, databatch=train_databatch)
     elif actiontype in ["evaluation", "dump_outputs"]:
         model.load_params(path_snapshot)
