@@ -11,15 +11,14 @@ STOP = "STOP"
 CONT = "CONT"
 
 COARSE_POSTAG_MAP = {
-    # "Noun": ["NN", "NNS", "NNP", "NNPS", "VBG"], # -> Noun, Nounorverb
-    # "Verb": ["VB", "VBD", "VBN", "VBP", "VBZ"], # -> Verb, NounOrVerb
-    "Noun": ["NN", "NNS", "NNP", "NNPS"], # -> Noun, NounOrVerb
-    "Verb": ["VB", "VBD", "VBN", "VBP", "VBZ", "VBG"], # -> Verb, NounOrVerb
-    "Pronoun": ["PRP", "WP"], # -> Noun, NounOrVerb
-    "Auxiliary": ["MD"], # -> Verb, NounOrVerb
+    # "Noun": ["NN", "NNS", "NNP", "NNPS", "VBG"],
+    # "Verb": ["VB", "VBD", "VBN", "VBP", "VBZ"],
+    "Noun": ["NN", "NNS", "NNP", "NNPS"],
+    "Verb": ["VB", "VBD", "VBN", "VBP", "VBZ", "VBG"],
+    "Pronoun": ["PRP", "WP"],
+    "Auxiliary": ["MD"],
     "Adjective": ["JJ", "JJR", "JJS"],
     "Adverb": ["RB", "RBS", "WRB", "RBR"],
-    # "Demonstrative": ["WDT", "DT", "WP$", "PRP$"],
     "Determiner": ["WDT", "DT", "WP$", "PRP$"],
     # "Adposition": ["IN", "TO"],
     "Preposition": ["IN", "TO"],

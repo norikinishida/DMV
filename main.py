@@ -149,8 +149,8 @@ def compute_dependency_accuracy(preds, golds, batch_postags):
         pred_dtree = treetk.arcs2dtree(pred_arcs)
         gold_dtree = treetk.arcs2dtree(gold_arcs)
 
-        undir_gold_arcs = []
         undir_pred_arcs = []
+        undir_gold_arcs = []
         for d in range(len(postags)):
             if d == 0:
                 continue # Ignore ROOT
@@ -158,11 +158,15 @@ def compute_dependency_accuracy(preds, golds, batch_postags):
                 continue # Ignore removal punctuations
             pred_h, _ = pred_dtree.get_head(d)
             gold_h, _ = gold_dtree.get_head(d)
+
             n_arcs += 1.0
+
             if pred_h == gold_h:
                 n_ok_dir += 1.0
+
             undir_pred_arcs.append(sorted((pred_h, d)))
             undir_gold_arcs.append(sorted((gold_h, d)))
+
         for undir_pred_arc in undir_pred_arcs:
             if undir_pred_arc in undir_gold_arcs:
                 n_ok_undir += 1.0
